@@ -16,6 +16,6 @@ spec:
         app: vote
     spec:
       containers:
-      - image: instavote/vote:v14
+      - image: instavote/vote:movies
         name: vote
         resources: {}
