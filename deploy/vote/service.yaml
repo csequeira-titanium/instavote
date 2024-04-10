@@ -1,31 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    cloud.google.com/neg: '{"ingress":true}'
-  creationTimestamp: "2024-04-10T09:42:47Z"
   labels:
     app: vote
   name: vote
-  namespace: default
-  resourceVersion: "145316"
-  uid: 002c9b96-2c77-4c97-94fb-5ee5d2a1ef88
+  namespace: instavote
 spec:
-  clusterIP: 10.102.149.135
-  clusterIPs:
-  - 10.102.149.135
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
-  - name: "80"
+  - name: "http"
     nodePort: 30000
     port: 80
     protocol: TCP
     targetPort: 80
   selector:
     app: vote
-  sessionAffinity: None
   type: NodePort
