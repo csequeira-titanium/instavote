@@ -10,5 +10,5 @@ spec:
   template:
     spec:
       containers:
-      - image: instavote/vote:latest
+      - image: instavote/vote:fixed
         name: vote
