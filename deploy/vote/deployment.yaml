@@ -18,6 +18,6 @@ spec:
         app: vote
     spec:
       containers:
-      - image: instavote/vote
+              - image: instavote/vote:v14
         name: vote
         resources: {}
